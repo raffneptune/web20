@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./images/raffneptune.jpg" type="image/x-icon" />
+    <title>Raff | Password</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="heading">>Generate a secure password</h1>
+        <div class="mode">
+          <label for="dark-mode-btn" class="toggle">
+            <div class="toggle-track">
+              <input
+                type="checkbox"
+                id="dark-mode-btn"
+                class="toggle-checkbox"
+              />
+              <span class="toggle-thumb"></span>
+              <img src="images/sun.png" alt="" />
+              <img src="images/moon.png" alt="" />
+            </div>
+          </label>
+        </div>
+      </header>
+      <section class="display">
+        <div class="wrapper">
+          <input type="text" id="password-display" disabled />
+          <img src="images/copy.png" alt="" class="icon" id="copy-btn" />
+        </div>
+      </section>
+      <div class="doted-line"></div>
+      <section class="customize">
+        <h1 class="heading">Customize your password</h1>
+        <div class="wrapper">
+          <div class="left-side">
+            <div class="customize-item">
+              <label for="lowercase" class="checkbox-container">
+                <input type="checkbox" id="lowercase" checked />
+                <div class="checkmark"></div>
+              </label>
+              <label for="lowercase">lowercase</label>
+            </div>
+            <div class="customize-item">
+              <label for="uppercase" class="checkbox-container">
+                <input type="checkbox" id="uppercase" />
+                <div class="checkmark"></div>
+              </label>
+              <label for="uppercase">uppercase</label>
+            </div>
+            <div class="customize-item">
+              <label for="numbers" class="checkbox-container">
+                <input type="checkbox" id="numbers" />
+                <div class="checkmark"></div>
+              </label>
+              <label for="numbers">numbers</label>
+            </div>
+            <div class="customize-item">
+              <label for="symbols" class="checkbox-container">
+                <input type="checkbox" id="symbols" />
+                <div class="checkmark"></div>
+              </label>
+              <label for="symbols">symbols</label>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="customize-item">
+              <div>
+                <label for="length">length</label>
+                <input
+                  type="number"
+                  min="6"
+                  max="50"
+                  value="10"
+                  id="length-input"
+                />
+              </div>
+              <input
+                type="range"
+                class="slider"
+                min="6"
+                max="50"
+                value="10"
+                id="length-slider"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <button class="btn" id="generate-btn">Generate</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
